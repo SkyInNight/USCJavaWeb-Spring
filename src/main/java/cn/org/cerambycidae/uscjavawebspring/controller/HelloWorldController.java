@@ -29,7 +29,6 @@ public class HelloWorldController {
         user.setUid(1);
         userRepository.save(user);
         List<User> users = userRepository.findAll();
-        modelMap.put("users",users);
-        return "helloBoot";
+        return users.size()+"";
     }
 }
